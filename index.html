@@ -47,7 +47,7 @@
         We design and develop scalable, visually appealing websites<br/>
         that help new brands establish a strong digital presence.
       </p>
-      <a href="#portfolio" class="hero-work-link">Our Work</a>
+      <a href="#services" class="hero-work-btn">Our Services →</a>
 
       <div class="hero-clients">
         <div class="client-avatars">
@@ -114,7 +114,7 @@
       <!-- Left: Experience Card -->
       <div class="about-left">
         <div class="exp-card">
-          <span class="exp-number">5+</span>
+          <span class="exp-number"><span class="exp-golden">5+</span></span>
           <span class="exp-label">years of<br/>experience</span>
         </div>
       </div>
@@ -398,11 +398,14 @@
               <p class="success-sub">We'll get back to you within 24 hours.</p>
             </div>
           </div>
-          <form id="contactMainForm" class="contact-form" onsubmit="handleFormSubmit(event)">
-            <!-- Formsubmit hidden fields -->
+          <form id="contactMainForm" class="contact-form"
+            action="https://formsubmit.co/skillmatch.career@gmail.com"
+            method="POST">
+            <!-- Formsubmit config -->
             <input type="hidden" name="_subject" value="New Contact from SkillMatch Website" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://neeraj62.github.io/skillmatch/thanks.html" />
             <input
               type="text"
               id="fname"
@@ -429,7 +432,6 @@
             ></textarea>
             <button type="submit" class="form-btn" id="sendBtn">
               <span id="sendBtnText">Send Message</span>
-              <span id="sendBtnLoader" style="display:none">Sending...</span>
             </button>
           </form>
         </div>

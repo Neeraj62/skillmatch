@@ -269,6 +269,28 @@ body {
   color: var(--yellow);
 }
 
+/* Golden Our Services button */
+.hero-work-btn {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  background: var(--yellow);
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  margin-bottom: 2.4rem;
+  letter-spacing: 0.4px;
+  box-shadow: 0 4px 20px rgba(245,197,24,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeUp 1s 0.2s ease both;
+}
+
+.hero-work-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 30px rgba(245,197,24,0.6);
+}
+
 /* Clients */
 .hero-clients {
   display: flex;
@@ -576,6 +598,25 @@ body {
   color: var(--white);
   letter-spacing: -2px;
   line-height: 1;
+}
+
+/* Golden glowing 5+ */
+.exp-golden {
+  color: var(--yellow);
+  text-shadow: 0 0 20px rgba(245,197,24,0.7), 0 0 40px rgba(245,197,24,0.3);
+  font-size: inherit;
+  font-weight: 900;
+  background: linear-gradient(135deg, #f5c518, #ffd700, #f5a623);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(245,197,24,0.6)); }
+  50%       { filter: drop-shadow(0 0 20px rgba(245,197,24,1)); }
 }
 
 .exp-label {

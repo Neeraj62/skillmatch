@@ -12,7 +12,7 @@ window.addEventListener('scroll', () => {
 
 // ===== HAMBURGER MENU =====
 const hamburger = document.getElementById('hamburger');
-const navLinks  = document.getElementById('navLinks');
+const navLinks = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
@@ -27,11 +27,11 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 // ===== FLOATING CARD PARALLAX ON MOUSE MOVE =====
-const panel  = document.querySelector('.hero-panel');
-const cards  = document.querySelectorAll('.panel-card');
+const panel = document.querySelector('.hero-panel');
+const cards = document.querySelectorAll('.panel-card');
 
 document.addEventListener('mousemove', (e) => {
-  const cx = window.innerWidth  / 2;
+  const cx = window.innerWidth / 2;
   const cy = window.innerHeight / 2;
   const dx = (e.clientX - cx) / cx;
   const dy = (e.clientY - cy) / cy;
@@ -68,14 +68,14 @@ document.querySelectorAll('.hero-content > *').forEach(el => {
 async function handleFormSubmit(e) {
   e.preventDefault();
 
-  const btn       = document.getElementById('sendBtn');
-  const btnText   = document.getElementById('sendBtnText');
+  const btn = document.getElementById('sendBtn');
+  const btnText = document.getElementById('sendBtnText');
   const btnLoader = document.getElementById('sendBtnLoader');
-  const formEl    = document.getElementById('contactMainForm');
+  const formEl = document.getElementById('contactMainForm');
   const successEl = document.getElementById('formSuccess');
 
   // Show loading state
-  btnText.style.display   = 'none';
+  btnText.style.display = 'none';
   btnLoader.style.display = 'inline';
   btn.disabled = true;
 
@@ -93,15 +93,15 @@ async function handleFormSubmit(e) {
 
     if (result.success === 'true' || result.success === true) {
       // Hide form, show success message
-      formEl.style.display    = 'none';
+      formEl.style.display = 'none';
       successEl.style.display = 'flex';
 
       // Reset after 5 seconds
       setTimeout(() => {
-        formEl.style.display    = 'flex';
+        formEl.style.display = 'flex';
         successEl.style.display = 'none';
         formEl.reset();
-        btnText.style.display   = 'inline';
+        btnText.style.display = 'inline';
         btnLoader.style.display = 'none';
         btn.disabled = false;
       }, 5000);
@@ -112,14 +112,14 @@ async function handleFormSubmit(e) {
 
   } catch (err) {
     // Fallback: show error
-    btnText.style.display   = 'inline';
+    btnText.style.display = 'inline';
     btnLoader.style.display = 'none';
-    btnText.textContent     = '✗ Failed! Try again';
-    btn.style.background    = 'linear-gradient(135deg, #ef4444, #dc2626)';
+    btnText.textContent = '✗ Failed! Try again';
+    btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
     btn.disabled = false;
 
     setTimeout(() => {
-      btnText.textContent  = 'Send Message';
+      btnText.textContent = 'Send Message';
       btn.style.background = 'linear-gradient(135deg, #7c3aed, #a855f7)';
     }, 3000);
   }

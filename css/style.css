@@ -802,9 +802,9 @@ body {
 }
 
 .tsoc-btn {
-  width: 30px; height: 30px;
+  width: 34px; height: 34px;
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 8px;
   color: var(--muted);
   font-size: 0.68rem;
@@ -812,9 +812,18 @@ body {
   text-decoration: none;
   display: flex; align-items: center; justify-content: center;
   text-transform: lowercase;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
-.tsoc-btn:hover { background: var(--purple); color: #fff; }
+.tsoc-btn:hover { background: var(--purple); color: #fff; border-color: var(--purple); }
+
+/* LinkedIn-specific button */
+.tsoc-linkedin {
+  background: rgba(10,102,194,0.15);
+  border-color: rgba(10,102,194,0.35);
+  color: #0a66c2;
+}
+.tsoc-linkedin svg { width: 16px; height: 16px; }
+.tsoc-linkedin:hover { background: #0a66c2; color: #fff; border-color: #0a66c2; }
 
 /* Photo card (with real image) */
 .photo-card {
